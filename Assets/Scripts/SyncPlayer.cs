@@ -30,5 +30,22 @@ public class SyncPlayer : MonoBehaviour
         {
             shadowRb.linearVelocity = movement;
         }
+        
+        // Zキーを押したら、本体と影の位置を入れ替える
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            // 本体と影が両方存在するときだけ実行
+            if (playerRb != null && shadowRb != null)
+            {
+                // 位置を一時保存して入れ替え（変数のスワップ）
+                Vector3 tempPos = playerRb.transform.position;
+                playerRb.transform.position = shadowRb.transform.position;
+                shadowRb.transform.position = tempPos;
+
+                // 入れ替えた瞬間の慣性を消す（滑り防止）
+                playerRb.linearVelocity = Vector2.zero;
+                shadowRb.linearVelocity = Vector2.zero;
+            }
+        }
     }
 }
