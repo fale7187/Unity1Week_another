@@ -5,7 +5,7 @@ public class DoorSwitch : MonoBehaviour
     [Header("開閉するドア")]
     public GameObject door;
 
-    [Header("ドアが開いているときの色（半透明とか）")]
+    [Header("スイッチの色設定")]
     public Color activeColor = Color.green;
     private Color defaultColor;
     private SpriteRenderer myRenderer;
@@ -16,41 +16,48 @@ public class DoorSwitch : MonoBehaviour
     void Start()
     {
         myRenderer = GetComponent<SpriteRenderer>();
-        defaultColor = myRenderer.color; // 元の色を覚えておく
+        if (myRenderer != null)
+        {
+            defaultColor = myRenderer.color; // 元の色を覚えておく
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Playerタグ（本体または影）が乗ったら
-        if (collision.CompareTag("Player") || collision.CompareTag("Shadow"))
+        // Player, Shadow, Boxタグが乗ったら
+        if (collision.CompareTag("Player") || collision.CompareTag("Shadow") || collision.CompareTag("Box"))
         {
-            onSwitchCount++; // 乗っている人数を増やす
+            onSwitchCount++;
             UpdateDoorState();
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") || collision.CompareTag("Shadow"))
+        if (collision.CompareTag("Player") || collision.CompareTag("Shadow") || collision.CompareTag("Box"))
         {
-            onSwitchCount--; // 乗っている人数を減らす
+            onSwitchCount--;
             UpdateDoorState();
         }
     }
 
     void UpdateDoorState()
     {
-        if (onSwitchCount > 0)
+        // ★シーンリセット時のエラー防止
+        if (door == null) return;
+
+        // 誰か一人でも乗っていれば「ON」
+        bool isPressed = onSwitchCount > 0;
+
+        if (isPressed)
         {
-            // 誰かが乗っている -> ドアを消す（開ける）
-            door.SetActive(false);
-            myRenderer.color = activeColor; // スイッチの色を変える
+            door.SetActive(false); // ドアを開ける
+            if (myRenderer != null) myRenderer.color = activeColor; // スイッチの色を変える
         }
         else
         {
-            // 誰も乗っていない -> ドアを出す（閉める）
-            door.SetActive(true);
-            myRenderer.color = defaultColor; // スイッチの色を戻す
+            door.SetActive(true); // ドアを閉める
+            if (myRenderer != null) myRenderer.color = defaultColor; // スイッチの色を戻す
         }
     }
 }
