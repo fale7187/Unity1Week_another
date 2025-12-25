@@ -1219,6 +1219,10 @@ PrefabInstance:
       propertyPath: clearUI
       value: 
       objectReference: {fileID: 1194666990}
+    - target: {fileID: 2315565601374519962, guid: 3812295800131d84a9e2fc5fb717707c, type: 3}
+      propertyPath: stageNumber
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8943223407253658654, guid: 3812295800131d84a9e2fc5fb717707c, type: 3}
       propertyPath: m_LocalScale.y
       value: 1
