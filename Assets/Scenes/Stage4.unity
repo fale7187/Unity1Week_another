@@ -209,6 +209,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09f53c2eb6fad584ba0ea34e91ea7060, type: 3}
+--- !u!1 &408538295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 557229782299234388, guid: d2f79372f2b92f848965e6c2ad87f2e3, type: 3}
+  m_PrefabInstance: {fileID: 920794659}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &435921527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -451,7 +456,15 @@ PrefabInstance:
     - target: {fileID: 4771699554189564870, guid: 057a49bd26730394588106f55ec2afdb, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 392319886}
+      objectReference: {fileID: 408538295}
+    - target: {fileID: 4771699554189564870, guid: 057a49bd26730394588106f55ec2afdb, type: 3}
+      propertyPath: activeColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771699554189564870, guid: 057a49bd26730394588106f55ec2afdb, type: 3}
+      propertyPath: activeColor.g
+      value: 0.56443787
+      objectReference: {fileID: 0}
     - target: {fileID: 7399362623931372827, guid: 057a49bd26730394588106f55ec2afdb, type: 3}
       propertyPath: m_Name
       value: Switch (2)
@@ -748,7 +761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   canMove: 1
   moveSpeed: 5
-  jumpForce: 12
+  jumpForce: 13
 --- !u!1001 &1362472353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1168,7 +1181,7 @@ Transform:
   m_GameObject: {fileID: 1638199133}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08268009, y: -0, z: -0, w: 0.99657613}
-  m_LocalPosition: {x: -8.12, y: -1.42, z: 0}
+  m_LocalPosition: {x: -6.12, y: -1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1396,7 +1409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   canMove: 1
   moveSpeed: 5
-  jumpForce: 12
+  jumpForce: 13
 --- !u!1001 &472130474218073503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1409,6 +1422,18 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 1159212664}
+    - target: {fileID: 4771699554189564870, guid: 057a49bd26730394588106f55ec2afdb, type: 3}
+      propertyPath: activeColor.b
+      value: 0.09683152
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771699554189564870, guid: 057a49bd26730394588106f55ec2afdb, type: 3}
+      propertyPath: activeColor.g
+      value: 0.28820595
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771699554189564870, guid: 057a49bd26730394588106f55ec2afdb, type: 3}
+      propertyPath: activeColor.r
+      value: 0.6037736
+      objectReference: {fileID: 0}
     - target: {fileID: 7399362623931372827, guid: 057a49bd26730394588106f55ec2afdb, type: 3}
       propertyPath: m_Name
       value: Switch
@@ -1852,7 +1877,11 @@ PrefabInstance:
       objectReference: {fileID: 1194666990}
     - target: {fileID: 2315565601374519962, guid: 3812295800131d84a9e2fc5fb717707c, type: 3}
       propertyPath: stageNumber
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315565601374519962, guid: 3812295800131d84a9e2fc5fb717707c, type: 3}
+      propertyPath: isFinalStage
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8943223407253658654, guid: 3812295800131d84a9e2fc5fb717707c, type: 3}
       propertyPath: m_LocalScale.y
