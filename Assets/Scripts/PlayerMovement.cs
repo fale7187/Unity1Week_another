@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // 上方向（Y軸正方向）に力を加える
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            SoundManager.instance.PlayJump();
         }
     }
 
@@ -94,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
             // （影のタグを "Shadow" に設定している前提です）
             if (gameObject.CompareTag("Player"))
             {
-                Debug.Log("本体がトゲに触れたので死亡！");
+                SoundManager.instance.PlayDead();
                 UnityEngine.SceneManagement.SceneManager.LoadScene(
                     UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
                 );

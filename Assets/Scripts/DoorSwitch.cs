@@ -27,6 +27,10 @@ public class DoorSwitch : MonoBehaviour
         // Player, Shadow, BoxÉ^ÉOÇ™èÊÇ¡ÇΩÇÁ
         if (collision.CompareTag("Player") || collision.CompareTag("Shadow") || collision.CompareTag("Box"))
         {
+            if (onSwitchCount == 0)
+            {
+                SoundManager.instance.PlaySwitch();
+            }
             onSwitchCount++;
             UpdateDoorState();
         }
