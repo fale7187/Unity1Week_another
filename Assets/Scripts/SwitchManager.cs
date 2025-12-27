@@ -12,6 +12,7 @@ public class SwitchManager : MonoBehaviour
     void Start()
     {
         // Å‰‚Ìó‘Ô‚ğ“K—p
+        Time.timeScale = 1f;
         UpdateControl();
     }
 

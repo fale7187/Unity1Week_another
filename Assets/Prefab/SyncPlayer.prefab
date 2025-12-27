@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 921293993362943738}
-  - component: {fileID: 5946731810352106650}
   m_Layer: 0
   m_Name: SyncPlayer
   m_TagString: Untagged
@@ -32,18 +31,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5946731810352106650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2689190719746141588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a95107fecbe7394299744cef225a2ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SyncPlayer
-  playerRb: {fileID: 0}
-  shadowRb: {fileID: 0}
-  moveSpeed: 5
