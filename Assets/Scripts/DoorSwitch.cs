@@ -29,7 +29,10 @@ public class DoorSwitch : MonoBehaviour
         {
             if (onSwitchCount == 0)
             {
-                SoundManager.instance.PlaySwitch();
+                if (SoundManager.instance != null)
+                {
+                    SoundManager.instance.PlaySwitch();
+                }
             }
             onSwitchCount++;
             UpdateDoorState();

@@ -1678,8 +1678,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1122087525408301389, guid: 3c11299f17539b74489293e750380f5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2504615304602355590}
   m_SourcePrefab: {fileID: 100100000, guid: 3c11299f17539b74489293e750380f5d, type: 3}
+--- !u!1 &2504615304602355589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1122087525408301389, guid: 3c11299f17539b74489293e750380f5d, type: 3}
+  m_PrefabInstance: {fileID: 2504615304602355588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2504615304602355590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2504615304602355589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328dea963a893d6498299f0f3e813530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoalPoint
+  clearUI: {fileID: 0}
+  stageNumber: 4
+  isFinalStage: 1
 --- !u!1001 &4031448197770075057
 PrefabInstance:
   m_ObjectHideFlags: 0

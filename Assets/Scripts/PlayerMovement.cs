@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // 上方向（Y軸正方向）に力を加える
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            SoundManager.instance.PlayJump();
+            if (SoundManager.instance != null) SoundManager.instance.PlayJump();
         }
     }
 
